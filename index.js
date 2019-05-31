@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port =  4000 || process.env
+const port =  process.env.PORT || 4000 
 const bodyParser = require('body-parser')
 const cors = require('cors')
 var pgp = require('pg-promise')(/* options */)
