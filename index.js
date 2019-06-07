@@ -11,7 +11,7 @@ app.use(cors())
 
 app.get('/', async (req, res) => { 
   console.log('getted')
- await db.multi('select * from high_scores order by score desc limit 10')
+ await db.multi('select * from high_scores order by score desc limit 20')
   .then(data => res.send(data))
   .catch(error => res.send(error))
 })
